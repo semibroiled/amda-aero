@@ -24,11 +24,14 @@ def v_max(P, C_d, A):
 
     return v_max_ms, v_max_kmh
 
-P = float(input('Enter Engine Power in kW:\n'))
-cd = float(input('Enter Drag Coefficient:\n'))
-A = float(input('Enter Frontal Area in sq. m:\n'))
+if __name__ == '__main__':
+    try:
+        P = float(input('Enter Engine Power in kW:\n'))
+        cd = float(input('Enter Drag Coefficient:\n'))
+        A = float(input('Enter Frontal Area in sq. m:\n'))
 
-v_ms, v_kmh = v_max(P, cd, A)
+        v_ms, v_kmh = v_max(P, cd, A)
 
-print(f'The theoretical top speed for a Engine Power of {P} kW, {cd} Drag Coefficeient and {A} sq. m. Frontal Area is:\n {v_ms:.3f} m/s which is {v_kmh:.3f} km/h')
-   
+        print(f'The theoretical top speed for a Engine Power of {P} kW, {cd} Drag Coefficeient and {A} sq. m. Frontal Area is:\n {v_ms:.3f} m/s which is {v_kmh:.3f} km/h')
+    except ValueError as ve:
+        print(ve)

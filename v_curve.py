@@ -1,5 +1,4 @@
 import numpy as np
-import matplotlib.pyplot as plt
 
 def v_curve(m, mu, C_l, A, g='Earth', rho='Standard'):
 
@@ -35,7 +34,7 @@ def v_curve(m, mu, C_l, A, g='Earth', rho='Standard'):
     rho_set = {'Standard':1.2754, #IUPAC Standard for Dry Air at 274K and 100kPa in kg/m^3
     }
 
-    R = np.arange(100) #Defined a Range of Values for R the Cornering Radius
+    R = np.arange(5, 100, 5, dtype = float) #Defined a Range of Values for R the Cornering Radius
 
     if 'earth' in g.lower():
         g = g_set['Earth']
@@ -44,11 +43,13 @@ def v_curve(m, mu, C_l, A, g='Earth', rho='Standard'):
         rho = rho_set['Standard']
 
     #The Velocity at Cornering Radius with C_l = 0 i.e. no Downforce as control
-    v_0Cl_ms = np.sqrt((m*g) / (m/(mu*R)-(0.5*rho*0*A)))
+    v_0Cl_ms = np.sqrt( (m*g) / ( ( ( m/(mu*R) ) -(0.5*rho*0*A) ) ) )
     v_0Cl_kmh = v_0Cl_ms * 3.6
     v_0Cl_rel = v_0Cl_kmh / v_0Cl_kmh
     
-    v_wCl_ms = np.sqrt((m*g)/((m/(mu*R))-(0.5*rho*C_l*A)))
+    #Now with C_l
+    v_wCl_ms = np.sqrt( (m*g) / ( ( (m/(mu*R))-(0.5*rho*C_l*A) ) ) )
+    #print(((m/(mu*R))-(0.5*rho*C_l*A))>0 ) Need to check formulas and at least see if the formulas right, and jot down typical ranges of values and include example in docstring
     v_wCl_kmh = v_wCl_ms * 3.6
     v_curve_abs = v_wCl_kmh.copy()
     
@@ -56,36 +57,23 @@ def v_curve(m, mu, C_l, A, g='Earth', rho='Standard'):
     v_wCl_rel = v_wCl_kmh /  v_0Cl_kmh
     v_curve_rel = v_wCl_rel.copy()
 
-
-    plot(R, v_curve_rel, 'b')
-    hold on 
-    plot(R, v_0Cl_rel, '--r')
-    
-    xlabel('Corner Radius, R [m]')
-    ylabel('Relative Performance')
-    title('Relative Performance in Relation to Curve Radius')
-    legend('Input Cl', 'Cl=0') %Does Cl=0 really mean no downforce?
-    axis tight
-    hold off
-
-plot(R, v_curve_abs, 'b')
-    hold on 
-    plot(R, v_0Cl, '--r')
-    
-    xlabel('Corner Radius, R [m]')
-    ylabel('Maximum Absolute Velocity, v [km/h]')
-    title('Maximum Cornering Velocity in Relation to Curve Radius')
-    legend('Input Cl', 'Cl=0') %Does Cl=0 really mean no downforce?
-    axis tight
     return v_curve_abs, v_curve_rel
 
 
   
+if __name__ == '__main__':
 
-P = float(input('Enter Engine Power in kW:\n'))
-cd = float(input('Enter Drag Coefficient:\n'))
-A = float(input('Enter Frontal Area in sq. m:\n'))
+    try:
+        m = float(input('Enter Mass in kg:\n'))
+        cl = float(input('Enter Lift Coefficient:\n'))
+        A = float(input('Enter Frontal Area in sq. m:\n'))
+        mu = float(input('Enter Friction Coefficient:\n'))
+        v_abs, v_rel = v_curve(m, mu, cl, A)
 
-v_ms, v_kmh = v_max(P, cd, A)
-
-print(f'The theoretical top speed for a Engine Power of {P} kW, {cd} Drag Coefficeient and {A} sq. m. Frontal Area is:\n {v_ms:.3f} m/s which is {v_kmh:.3f} km/h')
+        print(f'The Turning Speeds for Mass {m} kg, {cl} Lift Coefficeient, {mu} Friction Coefficient and {A} sq. m. Frontal Area is:\n')
+        print('Relative Performance \n', v_rel)
+        print('Absolute Performance\n', v_abs)
+    except ValueError as ve:
+        print(ve)
+    except TypeError as te:
+        print(te)
