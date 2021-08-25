@@ -31,13 +31,15 @@ def v_max(P, A, C_d='Placeholder'):
 
 if __name__ == '__main__':
     try:
-        P = float(input('Enter Engine Power in kW:\n'))
+        #P = float(input('Enter Engine Power in kW:\n'))
         #cd = float(input('Enter Drag Coefficient:\n'))
-        A = float(input('Enter Frontal Area in sq. m:\n'))
+        #A = float(input('Enter Frontal Area in sq. m:\n'))
 
-        v_ms, v_kmh, C_d = v_max(P, A)
+        #v_ms, v_kmh, C_d = v_max(P, A)
 
-        print(f'The theoretical top speed for a Engine Power of {P} kW and {A} sq. m. Frontal Area is:\n')
+        v_ms, v_kmh, C_d = v_max(250, 12)
+
+        #print(f'The theoretical top speed for a Engine Power of {P} kW and {A} sq. m. Frontal Area is:\n')
         print('v_max_ms', v_ms)
         print('v_max_kmh', v_kmh)
         print('C_d', C_d)
