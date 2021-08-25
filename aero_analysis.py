@@ -67,3 +67,5 @@ for key in dataframes:
 #can you get an f string o the lhs to declare varabiles *+?
 #worth da try
 #nope. obvs- its still n f string in the end
+#use .items() for better readability and shorter code. use dict comprehension to build dict with proper name
+#research hw to use os to get list of names for iterating through dict and assigning to dict anemes
