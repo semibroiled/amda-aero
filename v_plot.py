@@ -1,14 +1,32 @@
 '''Import local modules and plotting packages'''
 
-import matplotlib.pyplot as plt
-%matplotlib inline
-
-import pandas as pd
 import numpy as np
+import pandas as pd
+#%matplotlib inline
+
+import matplotlib.pyplot as plt
+
 import seaborn as sns
+sns.set()
 
 from v_max import v_max
 from v_curve import v_curve
+
+v_rel, v_abs, R = v_curve(250, 0.8, 1, 5)
+print(v_rel, v_abs, R)
+
+df = pd.DataFrame({'Cornering Radius': R, 'v_curve_rel': v_rel, 'v_curve_abs': v_abs}, columns=['Cornering Radius','v_curve_rel', 'v_curve_abs'], dtype=float)
+print(df)
+
+ax = plt.gca()
+
+df.plot(kind='line',x='Cornering Radius',y='v_curve_rel',ax=ax)
+df.plot(kind='line',x='Cornering Radius',y='v_curve_abs', color='red', ax=ax)
+
+plt.show()
+
+#sns.lmplot(x='Cornering Radius', y='v_curve_rel', data= df)
+#plt.show()
 
 
 

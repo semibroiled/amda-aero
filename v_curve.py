@@ -1,6 +1,6 @@
 import numpy as np
 
-def v_curve(m, mu, C_l, A, g='Earth', rho='Standard'):
+def v_curve(m, mu, C_l, A, g='Earth', rho='Standard'):#later add R here as set input
 
     ''' This function outputs the __Relatice and Absolute Performance__ of a car against a Cornering Radius
      The passed inputs are:
@@ -15,14 +15,11 @@ def v_curve(m, mu, C_l, A, g='Earth', rho='Standard'):
      - g, Gravitational Acceleration in m/s^2
 
      The Basis Formula is; v = sqrt([m*g]/[(m/(mu*R))- 0.5*p*Cl*A]) !# is something missing here?!!!
-     Rearranging this provides us with the skeleton for our function
-
-     The function outputs a plot of Relative Performance against a Cornering Radius
 
      Assumptions made are:
      - mu is a constant value
      
-     WARNING! You need to import numpy as np  and matplotlib.pyplot as plt
+     WARNING! You need to import numpy as np
      '''
 
 
@@ -57,7 +54,7 @@ def v_curve(m, mu, C_l, A, g='Earth', rho='Standard'):
     v_wCl_rel = v_wCl_kmh /  v_0Cl_kmh
     v_curve_rel = v_wCl_rel.copy()
 
-    return v_curve_abs, v_curve_rel
+    return v_curve_abs, v_curve_rel, R
 
 
   
@@ -68,10 +65,12 @@ if __name__ == '__main__':
         cl = float(input('Enter Lift Coefficient:\n'))
         A = float(input('Enter Frontal Area in sq. m:\n'))
         mu = float(input('Enter Friction Coefficient:\n'))
-        v_abs, v_rel = v_curve(m, mu, cl, A)
+        v_abs, v_rel, R = v_curve(m, mu, cl, A)
+        # v_rel, v_abs, R = v_curve(250, 0.8, 1, 5)
 
         print(f'The Turning Speeds for Mass {m} kg, {cl} Lift Coefficeient, {mu} Friction Coefficient and {A} sq. m. Frontal Area is:\n')
-        print('Relative Performance \n', v_rel)
+        print('Cornering Radius\n', R)
+        print('Relative Performance \n', v_rel)#add corner radius R as output here
         print('Absolute Performance\n', v_abs)
     except ValueError as ve:
         print(ve)
