@@ -50,9 +50,20 @@ for key in fullpaths:
 
 print(dataframes)
 
+
+
+
+
 # I should have dataframes for all tables her now
 
 # Now to output statistical value for last 50 iterations
 
+mod_df = dataframes.copy()
+
+for key in dataframes:
+    mod_df[key] = dataframes[key].iloc[-50::]
+    print(mod_df[key], mod_df.describe())
+
 #can you get an f string o the lhs to declare varabiles *+?
 #worth da try
+#nope. obvs- its still n f string in the end
