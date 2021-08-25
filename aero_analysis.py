@@ -51,4 +51,8 @@ for key in fullpaths:
 print(dataframes)
 
 # I should have dataframes for all tables her now
+
 # Now to output statistical value for last 50 iterations
+
+#can you get an f string o the lhs to declare varabiles *+?
+#worth da try
