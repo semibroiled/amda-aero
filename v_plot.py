@@ -12,7 +12,7 @@ sns.set()
 from v_max import v_max
 from v_curve import v_curve
 
-v_rel, v_abs, R = v_curve(250, 0.8, 1, 5)
+v_abs, v_rel, R = v_curve(250, 0.8, 1, 5)
 print(v_rel, v_abs, R)
 
 df = pd.DataFrame({'Cornering Radius': R, 'v_curve_rel': v_rel, 'v_curve_abs': v_abs}, columns=['Cornering Radius','v_curve_rel', 'v_curve_abs'], dtype=float)
