@@ -1,6 +1,6 @@
 import numpy as np
 
-def v_curve(m, mu, C_l, A, g='Earth', rho='Standard'):#later add R here as set input
+def v_curve(m, mu, C_l, A, g='Earth', rho='Standard', R='Placeholder'):
 
     ''' This function outputs the __Relatice and Absolute Performance__ of a car against a Cornering Radius
      The passed inputs are:
@@ -31,7 +31,8 @@ def v_curve(m, mu, C_l, A, g='Earth', rho='Standard'):#later add R here as set i
     rho_set = {'Standard':1.2754, #IUPAC Standard for Dry Air at 274K and 100kPa in kg/m^3
     }
 
-    R = np.arange(5, 100, 5, dtype = float) #Defined a Range of Values for R the Cornering Radius
+    if 'placeholder' in R.lower():
+        R = np.arange(5, 100, 5, dtype = float) #Defined a Range of Values for R the Cornering Radius
 
     if 'earth' in g.lower():
         g = g_set['Earth']
@@ -54,23 +55,26 @@ def v_curve(m, mu, C_l, A, g='Earth', rho='Standard'):#later add R here as set i
     v_wCl_rel = v_wCl_kmh /  v_0Cl_kmh
     v_curve_rel = v_wCl_rel.copy()
 
-    return v_curve_abs, v_curve_rel, R
+    return v_curve_abs, v_curve_rel, v_0Cl_rel, R
 
 
   
 if __name__ == '__main__':
 
     try:
-        m = float(input('Enter Mass in kg:\n'))
-        cl = float(input('Enter Lift Coefficient:\n'))
-        A = float(input('Enter Frontal Area in sq. m:\n'))
-        mu = float(input('Enter Friction Coefficient:\n'))
-        v_abs, v_rel, R = v_curve(m, mu, cl, A)
-        # v_rel, v_abs, R = v_curve(250, 0.8, 1, 5)
+        # m = float(input('Enter Mass in kg:\n'))
+        # cl = float(input('Enter Lift Coefficient:\n'))
+        # A = float(input('Enter Frontal Area in sq. m:\n'))
+        # mu = float(input('Enter Friction Coefficient:\n'))
+        # v_abs, v_rel, v_cont, R = v_curve(m, mu, cl, A)
+        
+        #For testing
+        v_rel, v_abs, v_cont, R = v_curve(250, 0.8, 1, 5)
 
-        print(f'The Turning Speeds for Mass {m} kg, {cl} Lift Coefficeient, {mu} Friction Coefficient and {A} sq. m. Frontal Area is:\n')
+       # print(f'The Turning Speeds for Mass {m} kg, {cl} Lift Coefficeient, {mu} Friction Coefficient and {A} sq. m. Frontal Area is:\n')
         print('Cornering Radius\n', R)
-        print('Relative Performance \n', v_rel)#add corner radius R as output here
+        print('Control', v_cont)
+        print('Relative Performance \n', v_rel)
         print('Absolute Performance\n', v_abs)
     except ValueError as ve:
         print(ve)
