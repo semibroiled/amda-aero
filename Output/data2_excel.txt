@@ -1,0 +1,78 @@
+*-- Title: data2_excel --* 
+
+==> Iterations seen are from the last 50 
+
+==> Columns in Dataframe: 
+Index(['Iteration', '03_Downforce Monitor: 03_Downforce Monitor (N)',
+       '03_Downforce_Diffusor Monitor: 03_Downforce_Diffusor Monitor (N)',
+       '03_Downforce_Frontfluegel Monitor: 03_Downforce_Frontfluegel Monitor (N)',
+       '03_Downforce_Heckfluegel Monitor: 03_Downforce_Heckfluegel Monitor (N)',
+       '03_Downforce_HI Monitor: 03_Downforce_HI Monitor (N)',
+       '03_Downforce_Seitenkasten Monitor: 03_Downforce_Seitenkasten Monitor (N)',
+       '03_Downforce_Seitenkasten_Flap Monitor: 03_Downforce_Seitenkasten_Flap Monitor (N)',
+       '03_Downforce_Seitenkasten_Main Monitor: 03_Downforce_Seitenkasten_Main Monitor (N)',
+       '03_Downforce_VO Monitor: 03_Downforce_VO Monitor (N)',
+       '04_Cx Monitor: 04_Cx Monitor', '04_Cz Monitor: 04_Cz Monitor',
+       '04_Luftwiderstand Monitor: 04_Luftwiderstand Monitor (N)',
+       '04_Luftwiderstand_Frontfluegel Monitor: 04_Luftwiderstand_Frontfluegel Monitor (N)',
+       '04_Luftwiderstand_Heckfluegel Monitor: 04_Luftwiderstand_Heckfluegel Monitor (N)',
+       '04_Luftwiderstand_Seitenkasten Monitor: 04_Luftwiderstand_Seitenkasten Monitor (N)',
+       '04_Luftwiderstand_Seitenkasten_Flap Monitor: 04_Luftwiderstand_Seitenkasten_Flap Monitor (N)',
+       '04_Luftwiderstand_Seitenkasten_Main Monitor: 04_Luftwiderstand_Seitenkasten_Main Monitor (N)',
+       '05_Massflow_KM Monitor: 05_Massflow_KM Monitor (kg/s)',
+       '06_Effizienz Monitor: 06_Effizienz Monitor',
+       '06_Effizienz_Diffusor Monitor: 06_Effizienz_Diffusor Monitor',
+       '06_Effizienz_Frontfluegel Monitor: 06_Effizienz_Frontfluegel Monitor',
+       '06_Effizienz_Heckfluegel Monitor: 06_Effizienz_Heckfluegel Monitor',
+       '06_Effizienz_Seitenkasten Monitor: 06_Effizienz_Seitenkasten Monitor',
+       'Iteration: Iteration 2'],
+      dtype='object')
+
+==> Statistical Descriptions, see corresponding csv file:
+        Iteration  ...  Iteration: Iteration 2
+count    50.00000  ...                50.00000
+mean   1475.50000  ...              1475.50000
+std      14.57738  ...                14.57738
+min    1451.00000  ...              1451.00000
+25%    1463.25000  ...              1463.25000
+50%    1475.50000  ...              1475.50000
+75%    1487.75000  ...              1487.75000
+max    1500.00000  ...              1500.00000
+
+[8 rows x 25 columns]
+
+==> Mean along columns, probably:
+Iteration                                                                                       1.475500e+03
+03_Downforce Monitor: 03_Downforce Monitor (N)                                                  1.109117e+16
+03_Downforce_Diffusor Monitor: 03_Downforce_Diffusor Monitor (N)                                8.170865e+15
+03_Downforce_Frontfluegel Monitor: 03_Downforce_Frontfluegel Monitor (N)                        5.667303e+15
+03_Downforce_Heckfluegel Monitor: 03_Downforce_Heckfluegel Monitor (N)                          5.955100e+15
+03_Downforce_HI Monitor: 03_Downforce_HI Monitor (N)                                            9.119705e+15
+03_Downforce_Seitenkasten Monitor: 03_Downforce_Seitenkasten Monitor (N)                        1.105798e+16
+03_Downforce_Seitenkasten_Flap Monitor: 03_Downforce_Seitenkasten_Flap Monitor (N)              1.133098e+16
+03_Downforce_Seitenkasten_Main Monitor: 03_Downforce_Seitenkasten_Main Monitor (N)              8.370163e+15
+03_Downforce_VO Monitor: 03_Downforce_VO Monitor (N)                                            1.569039e+16
+04_Cx Monitor: 04_Cx Monitor                                                                    9.741689e-01
+04_Cz Monitor: 04_Cz Monitor                                                                   -1.422839e+16
+04_Luftwiderstand Monitor: 04_Luftwiderstand Monitor (N)                                        7.859808e+15
+04_Luftwiderstand_Frontfluegel Monitor: 04_Luftwiderstand_Frontfluegel Monitor (N)              1.096824e+16
+04_Luftwiderstand_Heckfluegel Monitor: 04_Luftwiderstand_Heckfluegel Monitor (N)                1.443722e+16
+04_Luftwiderstand_Seitenkasten Monitor: 04_Luftwiderstand_Seitenkasten Monitor (N)              9.194246e+15
+04_Luftwiderstand_Seitenkasten_Flap Monitor: 04_Luftwiderstand_Seitenkasten_Flap Monitor (N)    1.693034e+16
+04_Luftwiderstand_Seitenkasten_Main Monitor: 04_Luftwiderstand_Seitenkasten_Main Monitor (N)    6.973911e-01
+05_Massflow_KM Monitor: 05_Massflow_KM Monitor (kg/s)                                           1.831796e-01
+06_Effizienz Monitor: 06_Effizienz Monitor                                                      0.000000e+00
+06_Effizienz_Diffusor Monitor: 06_Effizienz_Diffusor Monitor                                    1.470386e+16
+06_Effizienz_Frontfluegel Monitor: 06_Effizienz_Frontfluegel Monitor                            1.034060e+16
+06_Effizienz_Heckfluegel Monitor: 06_Effizienz_Heckfluegel Monitor                              1.559435e+16
+06_Effizienz_Seitenkasten Monitor: 06_Effizienz_Seitenkasten Monitor                            5.073163e+15
+Iteration: Iteration 2                                                                          1.475500e+03
+dtype: float64
+
+
+
+
+
+
+
+
