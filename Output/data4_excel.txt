@@ -1,6 +1,6 @@
 *-- Title: data4_excel --* 
 
-==> Iterations seen are from the last 50 
+==> Iterations seen are from the last 25 
 
 ==> Columns in Dataframe: 
 Index(['Iteration', '03_Downforce Monitor: 03_Downforce Monitor (N)',
@@ -29,44 +29,224 @@ Index(['Iteration', '03_Downforce Monitor: 03_Downforce Monitor (N)',
       dtype='object')
 
 ==> Statistical Descriptions, see corresponding csv file:
-        Iteration  ...  Iteration: Iteration 2
-count    50.00000  ...                50.00000
-mean   1475.50000  ...              1475.50000
-std      14.57738  ...                14.57738
-min    1451.00000  ...              1451.00000
-25%    1463.25000  ...              1463.25000
-50%    1475.50000  ...              1475.50000
-75%    1487.75000  ...              1487.75000
-max    1500.00000  ...              1500.00000
+         Iteration  03_Downforce Monitor: 03_Downforce Monitor (N)  \
+count    25.000000                                    2.500000e+01   
+mean   1488.000000                                    1.488264e+16   
+std       7.359801                                    5.855045e+15   
+min    1476.000000                                    1.736803e+15   
+25%    1482.000000                                    1.737747e+16   
+50%    1488.000000                                    1.738504e+16   
+75%    1494.000000                                    1.739106e+16   
+max    1500.000000                                    1.739461e+16   
+
+       03_Downforce_Diffusor Monitor: 03_Downforce_Diffusor Monitor (N)  \
+count                                       2.500000e+01                  
+mean                                        7.659374e+15                  
+std                                         3.105015e+15                  
+min                                         8.966043e+13                  
+25%                                         8.966056e+15                  
+50%                                         8.986864e+15                  
+75%                                         8.995912e+15                  
+max                                         8.996618e+15                  
+
+       03_Downforce_Frontfluegel Monitor: 03_Downforce_Frontfluegel Monitor (N)  \
+count                                       2.500000e+01                          
+mean                                        6.882514e+15                          
+std                                         2.303127e+15                          
+min                                         7.714137e+14                          
+25%                                         7.711687e+15                          
+50%                                         7.716355e+15                          
+75%                                         7.718402e+15                          
+max                                         7.718722e+15                          
+
+       03_Downforce_Heckfluegel Monitor: 03_Downforce_Heckfluegel Monitor (N)  \
+count                                       2.500000e+01                        
+mean                                        6.085886e+15                        
+std                                         1.634231e+15                        
+min                                         6.554249e+14                        
+25%                                         6.551415e+15                        
+50%                                         6.557398e+15                        
+75%                                         6.562215e+15                        
+max                                         6.566848e+15                        
+
+       03_Downforce_HI Monitor: 03_Downforce_HI Monitor (N)  \
+count                                       2.500000e+01      
+mean                                        9.343376e+15      
+std                                         4.186456e+15      
+min                                         1.137554e+15      
+25%                                         1.136233e+16      
+50%                                         1.139499e+16      
+75%                                         1.140613e+16      
+max                                         1.140923e+16      
+
+       03_Downforce_Seitenkasten Monitor: 03_Downforce_Seitenkasten Monitor (N)  \
+count                                       2.500000e+01                          
+mean                                        1.636202e+16                          
+std                                         1.169321e+16                          
+min                                         2.573041e+14                          
+25%                                         2.572730e+15                          
+50%                                         2.568094e+16                          
+75%                                         2.571827e+16                          
+max                                         2.573126e+16                          
+
+       03_Downforce_Seitenkasten_Flap Monitor: 03_Downforce_Seitenkasten_Flap Monitor (N)  \
+count                                       2.500000e+01                                    
+mean                                        1.344967e+16                                    
+std                                         1.930232e+16                                    
+min                                         6.454876e+15                                    
+25%                                         6.458523e+15                                    
+50%                                         6.465398e+15                                    
+75%                                         6.475121e+15                                    
+max                                         6.487625e+16                                    
+
+       03_Downforce_Seitenkasten_Main Monitor: 03_Downforce_Seitenkasten_Main Monitor (N)  \
+count                                       2.500000e+01                                    
+mean                                        1.155930e+16                                    
+std                                         8.529158e+15                                    
+min                                         1.837595e+14                                    
+25%                                         1.836856e+15                                    
+50%                                         1.834183e+16                                    
+75%                                         1.838495e+16                                    
+max                                         1.839929e+16                                    
+
+       03_Downforce_VO Monitor: 03_Downforce_VO Monitor (N)  ...  \
+count                                       2.500000e+01     ...   
+mean                                        1.440387e+16     ...   
+std                                         2.030351e+16     ...   
+min                                         5.984628e+14     ...   
+25%                                         5.981685e+15     ...   
+50%                                         5.992782e+15     ...   
+75%                                         6.004789e+15     ...   
+max                                         6.002832e+16     ...   
+
+       04_Luftwiderstand_Seitenkasten Monitor: 04_Luftwiderstand_Seitenkasten Monitor (N)  \
+count                                       2.500000e+01                                    
+mean                                        8.384963e+15                                    
+std                                         1.324592e+16                                    
+min                                         4.331923e+14                                    
+25%                                         4.324831e+15                                    
+50%                                         4.327497e+15                                    
+75%                                         4.331990e+15                                    
+max                                         4.346506e+16                                    
+
+       04_Luftwiderstand_Seitenkasten_Flap Monitor: 04_Luftwiderstand_Seitenkasten_Flap Monitor (N)  \
+count                                       2.500000e+01                                              
+mean                                        1.788986e+16                                              
+std                                         1.278207e+16                                              
+min                                         2.806909e+14                                              
+25%                                         2.820911e+15                                              
+50%                                         2.807186e+16                                              
+75%                                         2.809636e+16                                              
+max                                         2.820969e+16                                              
+
+       04_Luftwiderstand_Seitenkasten_Main Monitor: 04_Luftwiderstand_Seitenkasten_Main Monitor (N)  \
+count                                          25.000000                                              
+mean                                            0.852982                                              
+std                                             0.004443                                              
+min                                             0.848647                                              
+25%                                             0.848957                                              
+50%                                             0.851550                                              
+75%                                             0.856457                                              
+max                                             0.861326                                              
+
+       05_Massflow_KM Monitor: 05_Massflow_KM Monitor (kg/s)  \
+count                                          25.000000       
+mean                                            0.248431       
+std                                             0.000247       
+min                                             0.248071       
+25%                                             0.248227       
+50%                                             0.248420       
+75%                                             0.248639       
+max                                             0.248828       
+
+       06_Effizienz Monitor: 06_Effizienz Monitor  \
+count                                        25.0   
+mean                                          0.0   
+std                                           0.0   
+min                                           0.0   
+25%                                           0.0   
+50%                                           0.0   
+75%                                           0.0   
+max                                           0.0   
+
+       06_Effizienz_Diffusor Monitor: 06_Effizienz_Diffusor Monitor  \
+count                                       2.500000e+01              
+mean                                        1.336181e+16              
+std                                         1.989956e+16              
+min                                         7.964679e+14              
+25%                                         7.922366e+15              
+50%                                         7.944162e+15              
+75%                                         7.957781e+15              
+max                                         7.957962e+16              
+
+       06_Effizienz_Frontfluegel Monitor: 06_Effizienz_Frontfluegel Monitor  \
+count                                       2.500000e+01                      
+mean                                        1.119251e+16                      
+std                                         1.725525e+16                      
+min                                         5.674446e+14                      
+25%                                         5.674558e+15                      
+50%                                         5.675260e+15                      
+75%                                         5.676683e+15                      
+max                                         5.676714e+16                      
+
+       06_Effizienz_Heckfluegel Monitor: 06_Effizienz_Heckfluegel Monitor  \
+count                                       2.500000e+01                    
+mean                                        1.639568e+16                    
+std                                         1.345276e+16                    
+min                                         2.907486e+14                    
+25%                                         2.904909e+15                    
+50%                                         2.900554e+16                    
+75%                                         2.905305e+16                    
+max                                         2.907477e+16                    
+
+       06_Effizienz_Seitenkasten Monitor: 06_Effizienz_Seitenkasten Monitor  \
+count                                       2.500000e+01                      
+mean                                        7.649017e+15                      
+std                                         1.088731e+16                      
+min                                         5.930455e+14                      
+25%                                         5.926803e+15                      
+50%                                         5.937717e+15                      
+75%                                         5.946269e+15                      
+max                                         5.942512e+16                      
+
+       Iteration: Iteration 2  
+count               25.000000  
+mean              1488.000000  
+std                  7.359801  
+min               1476.000000  
+25%               1482.000000  
+50%               1488.000000  
+75%               1494.000000  
+max               1500.000000  
 
 [8 rows x 25 columns]
 
 ==> Mean along columns, probably:
-Iteration                                                                                       1.475500e+03
-03_Downforce Monitor: 03_Downforce Monitor (N)                                                  1.517687e+16
-03_Downforce_Diffusor Monitor: 03_Downforce_Diffusor Monitor (N)                                7.512710e+15
-03_Downforce_Frontfluegel Monitor: 03_Downforce_Frontfluegel Monitor (N)                        7.016005e+15
-03_Downforce_Heckfluegel Monitor: 03_Downforce_Heckfluegel Monitor (N)                          5.728781e+15
-03_Downforce_HI Monitor: 03_Downforce_HI Monitor (N)                                            9.293554e+15
-03_Downforce_Seitenkasten Monitor: 03_Downforce_Seitenkasten Monitor (N)                        1.684585e+16
-03_Downforce_Seitenkasten_Flap Monitor: 03_Downforce_Seitenkasten_Flap Monitor (N)              1.174703e+16
-03_Downforce_Seitenkasten_Main Monitor: 03_Downforce_Seitenkasten_Main Monitor (N)              1.259525e+16
-03_Downforce_VO Monitor: 03_Downforce_VO Monitor (N)                                            2.105036e+16
-04_Cx Monitor: 04_Cx Monitor                                                                    9.778324e-01
-04_Cz Monitor: 04_Cz Monitor                                                                   -1.464894e+16
-04_Luftwiderstand Monitor: 04_Luftwiderstand Monitor (N)                                        7.417973e+15
-04_Luftwiderstand_Frontfluegel Monitor: 04_Luftwiderstand_Frontfluegel Monitor (N)              1.211512e+16
-04_Luftwiderstand_Heckfluegel Monitor: 04_Luftwiderstand_Heckfluegel Monitor (N)                1.520105e+16
-04_Luftwiderstand_Seitenkasten Monitor: 04_Luftwiderstand_Seitenkasten Monitor (N)              8.570173e+15
-04_Luftwiderstand_Seitenkasten_Flap Monitor: 04_Luftwiderstand_Seitenkasten_Flap Monitor (N)    1.788816e+16
-04_Luftwiderstand_Seitenkasten_Main Monitor: 04_Luftwiderstand_Seitenkasten_Main Monitor (N)    8.620345e-01
-05_Massflow_KM Monitor: 05_Massflow_KM Monitor (kg/s)                                           2.488222e-01
+Iteration                                                                                       1.488000e+03
+03_Downforce Monitor: 03_Downforce Monitor (N)                                                  1.488264e+16
+03_Downforce_Diffusor Monitor: 03_Downforce_Diffusor Monitor (N)                                7.659374e+15
+03_Downforce_Frontfluegel Monitor: 03_Downforce_Frontfluegel Monitor (N)                        6.882514e+15
+03_Downforce_Heckfluegel Monitor: 03_Downforce_Heckfluegel Monitor (N)                          6.085886e+15
+03_Downforce_HI Monitor: 03_Downforce_HI Monitor (N)                                            9.343376e+15
+03_Downforce_Seitenkasten Monitor: 03_Downforce_Seitenkasten Monitor (N)                        1.636202e+16
+03_Downforce_Seitenkasten_Flap Monitor: 03_Downforce_Seitenkasten_Flap Monitor (N)              1.344967e+16
+03_Downforce_Seitenkasten_Main Monitor: 03_Downforce_Seitenkasten_Main Monitor (N)              1.155930e+16
+03_Downforce_VO Monitor: 03_Downforce_VO Monitor (N)                                            1.440387e+16
+04_Cx Monitor: 04_Cx Monitor                                                                    9.768761e-01
+04_Cz Monitor: 04_Cz Monitor                                                                   -1.405841e+16
+04_Luftwiderstand Monitor: 04_Luftwiderstand Monitor (N)                                        6.759563e+15
+04_Luftwiderstand_Frontfluegel Monitor: 04_Luftwiderstand_Frontfluegel Monitor (N)              1.212683e+16
+04_Luftwiderstand_Heckfluegel Monitor: 04_Luftwiderstand_Heckfluegel Monitor (N)                1.599436e+16
+04_Luftwiderstand_Seitenkasten Monitor: 04_Luftwiderstand_Seitenkasten Monitor (N)              8.384963e+15
+04_Luftwiderstand_Seitenkasten_Flap Monitor: 04_Luftwiderstand_Seitenkasten_Flap Monitor (N)    1.788986e+16
+04_Luftwiderstand_Seitenkasten_Main Monitor: 04_Luftwiderstand_Seitenkasten_Main Monitor (N)    8.529821e-01
+05_Massflow_KM Monitor: 05_Massflow_KM Monitor (kg/s)                                           2.484307e-01
 06_Effizienz Monitor: 06_Effizienz Monitor                                                      0.000000e+00
-06_Effizienz_Diffusor Monitor: 06_Effizienz_Diffusor Monitor                                    1.353829e+16
-06_Effizienz_Frontfluegel Monitor: 06_Effizienz_Frontfluegel Monitor                            1.242168e+16
-06_Effizienz_Heckfluegel Monitor: 06_Effizienz_Heckfluegel Monitor                              1.645358e+16
-06_Effizienz_Seitenkasten Monitor: 06_Effizienz_Seitenkasten Monitor                            6.764187e+15
-Iteration: Iteration 2                                                                          1.475500e+03
+06_Effizienz_Diffusor Monitor: 06_Effizienz_Diffusor Monitor                                    1.336181e+16
+06_Effizienz_Frontfluegel Monitor: 06_Effizienz_Frontfluegel Monitor                            1.119251e+16
+06_Effizienz_Heckfluegel Monitor: 06_Effizienz_Heckfluegel Monitor                              1.639568e+16
+06_Effizienz_Seitenkasten Monitor: 06_Effizienz_Seitenkasten Monitor                            7.649017e+15
+Iteration: Iteration 2                                                                          1.488000e+03
 dtype: float64
 
 
